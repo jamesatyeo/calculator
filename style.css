@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Calculator set up */
+
+#calc-outer {
+    width: max-content;
+    border: 1px solid grey;
+    padding: 20px;
+    border-radius: 3px;
+    margin: 40px auto;
+}
+
+#calc-inner {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: 100px repeat(5, 80px);
+    grid-auto-flow: dense;
+    grid-gap: 10px;
+    width: max-content;
+}
+
+#display {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    border: 1px solid grey;
+    border-radius: 3px;
+}
+
+
+#equals {
+    grid-column: 4 / 5;
+    grid-row: 4 / -1;
+}
+
+/* Calculator display set up */
+
+#display {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 50px;
+    align-content: center;
+    direction: rtl;
+}
+
+#display div {
+    font-size: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 3px;
+}
+
+button {
+    border: 1px solid rgb(118, 118, 118);
+}
+
+button:active {
+    background-color: slategrey;
+}
+
+button:focus {
+    outline: none;
+}
+
+#addition:active,
+#subtraction:active,
+#multiplication:active,
+#division:active {
+    background-color: rgb(239, 239, 239);
+}
+
+
